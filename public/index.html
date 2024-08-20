@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: linear-gradient(135deg, #81FFEF 10%, #F067B4 100%);
+    }
+    .container {
+        background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    .form-group input[type="checkbox"] {
+        width: auto;
+    }
+    .form-group .gender {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .error {
+        color:yellow;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+    button {
+        margin-left: 30px;
+        height: 35px;
+        width: 70%;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:disabled {
+        background-color: #ccc;
+    }
+    h2 {
+        margin-left: 45px;    
+    }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP page</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up page</h2>
+        <form id="sign-in-form">
+            <div class="form-group">
+                <label for="firstName" style="font-weight: 600;">First Name</label>
+                <input type="text" id="firstName" name="firstName">
+                <div class="error" id="firstNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" style="font-weight: 600;">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+                <div class="error" id="lastNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email" style="font-weight: 600;">Email</label>
+                <input type="email" id="email" name="email">
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label style="font-weight: 600;">Gender</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>                
+                <div class="error" id="genderError"></div>
+            </div>
+            <div class="form-group">
+                <label for="country" style="font-weight: 600;">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select your country</option>
+                    <option value="Canada">Canada</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Russia">Russia</option>
+                    <!-- Add more countries as needed -->
+                </select>
+                <div class="error" id="countryError"></div>
+            </div>
+            <div class="form-group">
+                <label for="accept">
+                    <input type="checkbox" id="accept" name="accept" value="yes"> Accept learning the Cucuwright
+                </label>
+                <div class="error" id="acceptError"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>   
+    <script src="script.js"></script>
+</body>
+</html>
