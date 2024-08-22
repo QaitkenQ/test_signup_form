@@ -7,5 +7,5 @@ export class BaseFunctions {
   constructor(page: Page) {
     this.page = page;
   }
-
+// Add base actions here.
 }
